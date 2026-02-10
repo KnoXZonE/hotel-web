@@ -14,7 +14,7 @@ const BookRoomFilter = () => {
 
                 <div className='flex-1'>
                     <select name="no-of-adult" id="noOfAdult" className='border border-primary/20 px-5 w-full h-16'>
-                        <option value="Adult" selected disabled>Adult</option>
+                        <option defaultValue='Adult' disabled>Adult</option>
                         <option value="one">One</option>
                         <option value="two">Two</option>
                         <option value="three">Three</option>
@@ -24,7 +24,7 @@ const BookRoomFilter = () => {
 
                 <div className='flex-1'>
                     <select name="no-of-child" id="noOfChild" className='border border-primary/20 px-5 w-full h-16'>
-                        <option value="Children" selected disabled>Children</option>
+                        <option defaultValue='Children' disabled>Children</option>
                         <option value="one">One</option>
                         <option value="two">Two</option>
                         <option value="three">Three</option>
@@ -36,7 +36,7 @@ const BookRoomFilter = () => {
                     <button className='bg-primary text-black flex items-center justify-center h-16 w-full uppercase font-medium'>Check Availability</button>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 

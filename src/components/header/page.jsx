@@ -1,11 +1,25 @@
+'use client'
+
 import Logo from '@/assets/logo.png'
 import { Menu } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 const Header = () => {
+    const [isSticky, setIsSticky] = useState(false);
+
+    useEffect(() => {
+        const handleSticky = () => {
+            setIsSticky(window.scrollY > 100);
+        }
+
+        window.addEventListener('scroll', handleSticky);
+
+        return () => window.removeEventListener('scroll', handleSticky);
+    }, [])
     return (
-        <header className='fixed top-0 left-0 w-full z-20 py-5 px-10 border-b border-primary/30'>
+        <header className={`fixed top-0 left-0 w-full z-20 py-5 px-10 border-b border-primary/30 transition-all duration-300 ease-in-out ${isSticky ? '-translate-y-[100%]' : 'block'}`}>
             <div className="flex items-center justify-between relative">
                 <div className=''>
                     <button className=''>
