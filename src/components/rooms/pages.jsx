@@ -41,7 +41,7 @@ const Rooms = () => {
     return (
         <div className='w-full pt-36'>
             <div className="container mx-auto">
-                <SectionTitle title="Room / Suits" subTitle="Accomodation" />
+                <SectionTitle title="Room / Suits" subTitle="Accomodation" customFont={'custom-font'} />
                 <RoomCard />
             </div>
         </div>
